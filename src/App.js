@@ -36,7 +36,7 @@ class App extends Component {
   }
 
   render() {
-    console.log('render');
+    // console.log('render from AppJS');
 
     const { monsters, searchField  } = this.state;
     const { onSearchChange } = this;
@@ -53,16 +53,7 @@ class App extends Component {
           placeholder='Search monsters' 
           onChange={onSearchChange}
         />
-        {
-          //  filteredMonsters.map((monster) => {
-          //   return (
-          //     <div key={monster.id}>
-          //       <h1>{monster.name}</h1>
-          //     </div>
-          //   )
-          // })
-        }
-        <CardList monsters={'I am the monster'}/>
+        <CardList monsters={filteredMonsters} anything={['a', 'b']} />
       </div>
     )
   }
